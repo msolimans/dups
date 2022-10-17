@@ -7,7 +7,6 @@ import (
 	"os"
 )
 
-
 func UnMarshalFile(fileName string, result interface{}) error {
 
 	raw, err := ioutil.ReadFile(fileName)

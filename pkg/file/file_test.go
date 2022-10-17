@@ -23,7 +23,6 @@ func init() {
 func load() {
 	_, filename, _, _ := runtime.Caller(1)
 	workingDir = path.Dir(filename)
-
 }
 
 
