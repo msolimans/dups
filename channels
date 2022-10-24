@@ -1,0 +1,57 @@
+
+go channels 
+	2 funcs with time.Sleep in and out 
+
+	introduce use of channels 
+ch := func () chan bool {
+        c := make(chan bool)
+
+        go func () {
+        time.Sleep(1 * time.Second)
+        fmt.Println("done 1")
+        c <- true 
+        }()
+        return c 
+    }
+
+    <-ch()
+
+	2 funcs with channels 
+	producer and consumer case with for loop (10 loops) 
+fn2 := func () chan int {
+        ch := make(chan int)
+        go func() {
+            for i := 0; i< 10; i++ {
+                ch <- i
+            }
+        }()
+
+        return ch
+    }
+
+    ch2 := fn2()
+
+    //receiving from channel
+    for i :=0; i< 10; i++ {
+        fmt.Println(<-ch2)
+    }
+
+  	WaitGroup and way to show how concurency work wih for loop
+	
+var s sync.WaitGroup
+
+    for i := 0; i < 10; i++ {
+        s.Add(1)
+        for i := 0;i <10;i++ {
+            go func(i int) {
+                time.Sleep(200 * time.Millisecond)
+                fmt.Println("hello", i )
+                s.Done()
+            }(i)
+        }
+        
+    }
+    
+    s.Wait()       
+	
+

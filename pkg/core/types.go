@@ -48,10 +48,12 @@ type Field struct {
 	Format0 *FormatX `json:"format,omitempty"`
 	Format1 *FormatX `json:"format,omitempty"`
 	Default bool `json:"default,omitempty"`
+
 }
 
 type Format struct {
 	Source string        `json:"source"`
+	Format	string 		  `json:"format"`
 	Thumbs []interface{} `json:"thumbs"`
 }
 

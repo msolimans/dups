@@ -1,0 +1,1620 @@
+{
+  "_id": "61e8666b010a37023e3d99a3",
+  "users": {
+    "enabled": true,
+    "scope": "scene",
+    "registration": "closed"
+  },
+  "ecommerce": {
+    "enabled": false
+  },
+  "counts": {
+    "total_entries": 0,
+    "asset_count": 0,
+    "asset_size": 0
+  },
+  "field_count": 25,
+  "thumb_count": 0,
+  "object_count": 5,
+  "task_count": 0,
+  "view_count": 9,
+  "scene_count": 9,
+  "credential_count": 0,
+  "status": "active",
+  "settings": {
+    "geo": false,
+    "timezone": "Eastern Time (US \u0026 Canada)",
+    "timezone_offset": "-18000",
+    "timezone_dst": "3600",
+    "cluster": "us-east",
+    "powered_by_link": false,
+    "new_count": true,
+    "registration_migration_status": "completed",
+    "https_redirect": true,
+    "should_purge_record_history": false,
+    "support_access": true,
+    "use_multiple_api_subdomains": false,
+    "scriptProtectionEnabled": true,
+    "embed_login_method": "cookies",
+    "ignoreBilling": false,
+    "v3_beta": false,
+    "v3_open_beta": true,
+    "mongo": "devenv",
+    "solr": "devenv"
+  },
+  "tasks": [],
+  "payment_processors": [],
+  "design": {
+    "general": {
+      "theme": "kn-beta",
+      "font": "Default (Roboto)",
+      "links": {
+        "color": "#43a1c6"
+      },
+      "buttons": {
+        "color": "#ffffff",
+        "bg_color": "#00396D"
+      },
+      "tables": {
+        "style": "clean",
+        "dividers": true,
+        "striped": true,
+        "hover": false,
+        "spacing": "m"
+      }
+    },
+    "regions": {
+      "body": {
+        "full_width": false
+      },
+      "header": {
+        "bg_color": "#023F74",
+        "menu": {
+          "show": true,
+          "user_auth_based": false,
+          "format": "buttons",
+          "color": "#ffffff",
+          "outline_or_fill_color": "#2f96b4"
+        },
+        "title": {
+          "color": "#ffffff",
+          "show_logo": false
+        }
+      }
+    },
+    "components": {
+      "notifications": {
+        "color": "#ffffff",
+        "bg_color": "#2f96b4"
+      }
+    }
+  },
+  "layout": {
+    "entry_scene_menu": true,
+    "app_menu_auth": true,
+    "theme": "kn-beta"
+  },
+  "copying": false,
+  "feature_flags": [
+    false
+  ],
+  "name": "New App",
+  "slug": "new-app",
+  "distributions": [],
+  "versions": [
+    {
+      "_id": "61e8666b010a37023e3d99a4",
+      "status": "live",
+      "objects": [
+        {
+          "inflections": {
+            "singular": "Product",
+            "plural": "Products"
+          },
+          "connections": {
+            "inbound": [],
+            "outbound": []
+          },
+          "user": false,
+          "status": "current",
+          "tasks": [],
+          "type": "StandardObject",
+          "_id": "61e869d51137bc002545fedc",
+          "name": "Products",
+          "fields": [
+            {
+              "type": "auto_increment",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e869d51137bc002545fedf",
+              "key": "field_2",
+              "name": "Product ID"
+            },
+            {
+              "type": "image",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e869d51137bc002545fee0",
+              "key": "field_3",
+              "name": "Image"
+            },
+            {
+              "type": "paragraph_text",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e869d51137bc002545fee1",
+              "key": "field_4",
+              "name": "Description"
+            },
+            {
+              "type": "short_text",
+              "required": true,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e869d51137bc002545fede",
+              "key": "field_1",
+              "name": "Products Name"
+            },
+            {
+              "type": "currency",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e869d51137bc002545fee3",
+              "key": "field_5",
+              "name": "Price"
+            },
+            {
+              "type": "boolean",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e869d51137bc002545fee4",
+              "key": "field_6",
+              "name": "Available"
+            }
+          ],
+          "template": "product",
+          "key": "object_1",
+          "identifier": "field_1"
+        },
+        {
+          "inflections": {
+            "singular": "Account",
+            "plural": "Accounts"
+          },
+          "connections": {
+            "inbound": [],
+            "outbound": []
+          },
+          "user": true,
+          "status": "current",
+          "tasks": [],
+          "type": "UserObject",
+          "_id": "61e869e11137bc002545fee5",
+          "name": "Accounts",
+          "fields": [
+            {
+              "type": "name",
+              "required": true,
+              "unique": false,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e869e11137bc002545fee7",
+              "key": "field_7",
+              "name": "Name"
+            },
+            {
+              "type": "email",
+              "required": true,
+              "unique": true,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e869e11137bc002545fee8",
+              "key": "field_8",
+              "name": "Email"
+            },
+            {
+              "type": "password",
+              "required": true,
+              "unique": true,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e869e11137bc002545fee9",
+              "key": "field_9",
+              "name": "Password"
+            },
+            {
+              "type": "multiple_choice",
+              "required": true,
+              "unique": false,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e869e11137bc002545feea",
+              "key": "field_10",
+              "name": "User Status"
+            },
+            {
+              "type": "user_roles",
+              "required": false,
+              "unique": false,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e869e11137bc002545feeb",
+              "key": "field_11",
+              "name": "User Roles"
+            }
+          ],
+          "key": "object_2",
+          "identifier": "field_7",
+          "profile_key": "all_users"
+        },
+        {
+          "inflections": {
+            "singular": "Manager",
+            "plural": "Managers"
+          },
+          "connections": {
+            "inbound": [],
+            "outbound": []
+          },
+          "user": true,
+          "status": "current",
+          "tasks": [],
+          "type": "UserObject",
+          "_id": "61e86a121137bc002545fef0",
+          "name": "Managers",
+          "fields": [
+            {
+              "type": "name",
+              "required": true,
+              "unique": false,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a121137bc002545fef2",
+              "key": "field_12",
+              "name": "Name"
+            },
+            {
+              "type": "email",
+              "required": true,
+              "unique": true,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a121137bc002545fef3",
+              "key": "field_13",
+              "name": "Email"
+            },
+            {
+              "type": "password",
+              "required": true,
+              "unique": true,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a121137bc002545fef4",
+              "key": "field_14",
+              "name": "Password"
+            },
+            {
+              "type": "multiple_choice",
+              "required": true,
+              "unique": false,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a121137bc002545fef5",
+              "key": "field_15",
+              "name": "User Status"
+            },
+            {
+              "type": "user_roles",
+              "required": false,
+              "unique": false,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a121137bc002545fef6",
+              "key": "field_16",
+              "name": "User Roles"
+            }
+          ],
+          "key": "object_3",
+          "identifier": "field_12",
+          "profile_key": "profile_3"
+        },
+        {
+          "inflections": {
+            "singular": "Employee",
+            "plural": "Employees"
+          },
+          "connections": {
+            "inbound": [],
+            "outbound": []
+          },
+          "user": true,
+          "status": "current",
+          "tasks": [],
+          "type": "UserObject",
+          "_id": "61e86a181137bc002545fef8",
+          "name": "Employees",
+          "fields": [
+            {
+              "type": "name",
+              "required": true,
+              "unique": false,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a181137bc002545fefa",
+              "key": "field_17",
+              "name": "Name"
+            },
+            {
+              "type": "email",
+              "required": true,
+              "unique": true,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a181137bc002545fefb",
+              "key": "field_18",
+              "name": "Email"
+            },
+            {
+              "type": "password",
+              "required": true,
+              "unique": true,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a181137bc002545fefc",
+              "key": "field_19",
+              "name": "Password"
+            },
+            {
+              "type": "multiple_choice",
+              "required": true,
+              "unique": false,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a181137bc002545fefd",
+              "key": "field_20",
+              "name": "User Status"
+            },
+            {
+              "type": "user_roles",
+              "required": false,
+              "unique": false,
+              "user": true,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a181137bc002545fefe",
+              "key": "field_21",
+              "name": "User Roles"
+            }
+          ],
+          "key": "object_4",
+          "identifier": "field_17",
+          "profile_key": "profile_4"
+        },
+        {
+          "inflections": {
+            "singular": "Employee",
+            "plural": "Employees"
+          },
+          "connections": {
+            "inbound": [],
+            "outbound": []
+          },
+          "user": true,
+          "status": "current",
+          "tasks": [],
+          "type": "UserObject",
+          "_id": "61e86a181137bc002545fef9",
+          "name": "Employees",
+          "fields": [],
+          "key": "object_4",
+          "identifier": "field_17",
+          "profile_key": "profile_4"
+        },
+        {
+          "inflections": {
+            "singular": "Order",
+            "plural": "Orders"
+          },
+          "connections": {
+            "inbound": [],
+            "outbound": []
+          },
+          "user": false,
+          "status": "current",
+          "tasks": [],
+          "type": "StandardObject",
+          "_id": "61e86a2c1137bc002545ff00",
+          "name": "Orders",
+          "fields": [
+            {
+              "type": "short_text",
+              "required": true,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a2c1137bc002545ff02",
+              "key": "field_22",
+              "name": "Orders Name"
+            },
+            {
+              "type": "auto_increment",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a2c1137bc002545ff03",
+              "key": "field_23",
+              "name": "Order ID"
+            },
+            {
+              "type": "multiple_choice",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a2c1137bc002545ff04",
+              "key": "field_24",
+              "name": "Status"
+            },
+            {
+              "type": "paragraph_text",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a2c1137bc002545ff05",
+              "key": "field_25",
+              "name": "Description"
+            },
+            {
+              "type": "currency",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a2c1137bc002545ff06",
+              "key": "field_26",
+              "name": "Total"
+            },
+            {
+              "type": "date_time",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a2c1137bc002545ff07",
+              "key": "field_27",
+              "name": "Order Date"
+            },
+            {
+              "type": "date_time",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a2c1137bc002545ff08",
+              "key": "field_28",
+              "name": "Ship Date"
+            },
+            {
+              "type": "address",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a2c1137bc002545ff09",
+              "key": "field_29",
+              "name": "Shipping Address"
+            },
+            {
+              "type": "multiple_choice",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a2c1137bc002545ff0a",
+              "key": "field_30",
+              "name": "Ship Type"
+            },
+            {
+              "type": "short_text",
+              "required": false,
+              "unique": false,
+              "user": false,
+              "conditional": false,
+              "rules": [],
+              "validation": [],
+              "_id": "61e86a2c1137bc002545ff0b",
+              "key": "field_31",
+              "name": "Customer"
+            }
+          ],
+          "template": "order",
+          "key": "object_5",
+          "identifier": "field_22"
+        }
+      ],
+      "scenes": [
+        {
+          "groups": [
+            {
+              "columns": [
+                {
+                  "keys": [
+                    "view_4"
+                  ],
+                  "width": 100
+                }
+              ]
+            }
+          ],
+          "_id": "61e8666b010a37023e3d99a5",
+          "name": "Home",
+          "slug": "home",
+          "key": "scene_1",
+          "views": [
+            {
+              "columns": [],
+              "links": [
+                {
+                  "name": "Products",
+                  "type": "scene",
+                  "scene": "products"
+                },
+                {
+                  "name": "Orders",
+                  "type": "scene",
+                  "scene": "orders"
+                }
+              ],
+              "inputs": [],
+              "_id": "61e86a5d1137bc002545ff11",
+              "groups": [],
+              "format": "none",
+              "label": "Menu",
+              "name": "Menu",
+              "type": "menu",
+              "title": "",
+              "description": "",
+              "source": {
+                "criteria": {
+                  "match": "all",
+                  "rules": [],
+                  "groups": []
+                },
+                "limit": "",
+                "sort": [],
+                "type": "database"
+              },
+              "key": "view_4"
+            }
+          ],
+          "parent": "home-login"
+        },
+        {
+          "groups": [],
+          "_id": "61e86a411137bc002545ff0d",
+          "name": "Home Login",
+          "slug": "home-login",
+          "key": "scene_3",
+          "views": [
+            {
+              "columns": [],
+              "links": [],
+              "inputs": [],
+              "_id": "61e86a411137bc002545ff0e",
+              "groups": null,
+              "format": "",
+              "label": "",
+              "name": "Login Form",
+              "type": "login",
+              "title": "Login",
+              "description": "Enter your email address and password to login.",
+              "source": null,
+              "key": "view_3"
+            }
+          ],
+          "type": "authentication"
+        },
+        {
+          "groups": [],
+          "_id": "61e869e11137bc002545feec",
+          "name": "Account Settings",
+          "slug": "account-settings",
+          "key": "scene_2",
+          "views": [
+            {
+              "columns": [],
+              "links": [],
+              "inputs": [],
+              "_id": "61e869e11137bc002545feed",
+              "groups": [
+                {
+                  "columns": [
+                    {
+                      "inputs": [
+                        {
+                          "field": {
+                            "key": "field_7"
+                          },
+                          "id": "field_7",
+                          "key": "field_7",
+                          "label": "Name",
+                          "type": "name"
+                        },
+                        {
+                          "field": {
+                            "key": "field_8"
+                          },
+                          "id": "field_8",
+                          "key": "field_8",
+                          "label": "Email",
+                          "type": "email"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "format": "",
+              "label": "",
+              "name": "Account Settings",
+              "type": "form",
+              "title": "Account Settings",
+              "description": "",
+              "source": {
+                "criteria": null,
+                "limit": "",
+                "sort": null,
+                "type": ""
+              },
+              "key": "view_1"
+            },
+            {
+              "columns": [],
+              "links": [],
+              "inputs": [],
+              "_id": "61e869e11137bc002545feee",
+              "groups": [
+                {
+                  "columns": [
+                    {
+                      "inputs": [
+                        {
+                          "action_authenticate": true,
+                          "action_update": true,
+                          "field": {
+                            "key": "field_9"
+                          },
+                          "id": "field_9",
+                          "key": "field_9",
+                          "label": "Password",
+                          "label_authenticate": "Current Password",
+                          "label_update": "New Password",
+                          "type": "password"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "format": "",
+              "label": "",
+              "name": "Change Password",
+              "type": "form",
+              "title": "Change Password",
+              "description": "",
+              "source": {
+                "criteria": null,
+                "limit": "",
+                "sort": null,
+                "type": ""
+              },
+              "key": "view_2"
+            }
+          ],
+          "type": "user"
+        },
+        {
+          "groups": [],
+          "_id": "61e86a5d1137bc002545ff12",
+          "name": "Products",
+          "slug": "products",
+          "key": "scene_4",
+          "views": [
+            {
+              "columns": [
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "field": {
+                    "key": "field_1"
+                  },
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Products Name",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "",
+                  "link_type": "text",
+                  "rules": [],
+                  "type": "field",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "field": {
+                    "key": "field_2"
+                  },
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Product ID",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "",
+                  "link_type": "text",
+                  "rules": [],
+                  "type": "field",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "field": {
+                    "key": "field_3"
+                  },
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Image",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "",
+                  "link_type": "text",
+                  "rules": [],
+                  "type": "field",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "field": {
+                    "key": "field_4"
+                  },
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Description",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "",
+                  "link_type": "text",
+                  "rules": [],
+                  "type": "field",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "field": {
+                    "key": "field_5"
+                  },
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Price",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "",
+                  "link_type": "text",
+                  "rules": [],
+                  "type": "field",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "field": {
+                    "key": "field_6"
+                  },
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Available",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "",
+                  "link_type": "text",
+                  "rules": [],
+                  "type": "field",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Edit Product",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "edit",
+                  "link_type": "text",
+                  "rules": [],
+                  "scene": "edit-product",
+                  "sortable": false,
+                  "type": "link",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Product Details",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "view",
+                  "link_type": "text",
+                  "rules": [],
+                  "scene": "product-details",
+                  "sortable": false,
+                  "type": "link",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                }
+              ],
+              "links": [],
+              "inputs": [],
+              "_id": "61e86a5d1137bc002545ff13",
+              "groups": [],
+              "format": "",
+              "label": "",
+              "name": "Products",
+              "type": "table",
+              "title": "Products",
+              "description": "",
+              "source": {
+                "criteria": {
+                  "match": "all",
+                  "rules": [],
+                  "groups": []
+                },
+                "limit": "",
+                "sort": [
+                  {
+                    "field": "field_1",
+                    "order": "asc"
+                  }
+                ],
+                "type": ""
+              },
+              "key": "view_5"
+            }
+          ],
+          "parent": "home"
+        },
+        {
+          "groups": [],
+          "_id": "61e86a5d1137bc002545ff14",
+          "name": "Edit Product",
+          "slug": "edit-product",
+          "key": "scene_5",
+          "views": [
+            {
+              "columns": [],
+              "links": [],
+              "inputs": [],
+              "_id": "61e86a5d1137bc002545ff15",
+              "groups": [
+                {
+                  "columns": [
+                    {
+                      "inputs": [
+                        {
+                          "field": {
+                            "key": "field_1"
+                          },
+                          "label": "Products Name",
+                          "type": "text_field"
+                        },
+                        {
+                          "field": {
+                            "key": "field_3"
+                          },
+                          "label": "Image",
+                          "type": "upload"
+                        },
+                        {
+                          "field": {
+                            "key": "field_4"
+                          },
+                          "label": "Description",
+                          "type": "text_area"
+                        },
+                        {
+                          "field": {
+                            "key": "field_5"
+                          },
+                          "label": "Price",
+                          "type": "text_field"
+                        },
+                        {
+                          "field": {
+                            "key": "field_6"
+                          },
+                          "label": "Available",
+                          "type": "boolean"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "format": "",
+              "label": "",
+              "name": "Edit Product",
+              "type": "form",
+              "title": "Edit Product",
+              "description": "",
+              "source": {
+                "criteria": null,
+                "limit": "",
+                "sort": null,
+                "type": ""
+              },
+              "key": "view_6"
+            }
+          ],
+          "parent": "products",
+          "object": "object_1"
+        },
+        {
+          "groups": [],
+          "_id": "61e86a5d1137bc002545ff16",
+          "name": "Product Details",
+          "slug": "product-details",
+          "key": "scene_6",
+          "views": [
+            {
+              "columns": [
+                {
+                  "groups": [
+                    {
+                      "columns": [
+                        [
+                          {
+                            "key": "field_1",
+                            "name": "Products Name"
+                          },
+                          {
+                            "key": "field_2",
+                            "name": "Product ID"
+                          },
+                          {
+                            "key": "field_3",
+                            "name": "Image"
+                          },
+                          {
+                            "key": "field_4",
+                            "name": "Description"
+                          },
+                          {
+                            "key": "field_5",
+                            "name": "Price"
+                          },
+                          {
+                            "key": "field_6",
+                            "name": "Available"
+                          }
+                        ]
+                      ]
+                    }
+                  ],
+                  "width": 100
+                }
+              ],
+              "links": [],
+              "inputs": [],
+              "_id": "61e86a5d1137bc002545ff17",
+              "groups": null,
+              "format": "",
+              "label": "",
+              "name": "Product",
+              "type": "details",
+              "title": "Product Details",
+              "description": "",
+              "source": {
+                "criteria": null,
+                "limit": "",
+                "sort": null,
+                "type": ""
+              },
+              "key": "view_7"
+            }
+          ],
+          "parent": "products",
+          "object": "object_1"
+        },
+        {
+          "groups": [],
+          "_id": "61e86a841137bc002545ff1c",
+          "name": "Orders",
+          "slug": "orders",
+          "key": "scene_7",
+          "views": [
+            {
+              "columns": [
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "field": {
+                    "key": "field_22"
+                  },
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Orders Name",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "",
+                  "link_type": "text",
+                  "rules": [],
+                  "type": "field",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "field": {
+                    "key": "field_23"
+                  },
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Order ID",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "",
+                  "link_type": "text",
+                  "rules": [],
+                  "type": "field",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "field": {
+                    "key": "field_24"
+                  },
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Status",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "",
+                  "link_type": "text",
+                  "rules": [],
+                  "type": "field",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "field": {
+                    "key": "field_25"
+                  },
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Description",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "",
+                  "link_type": "text",
+                  "rules": [],
+                  "type": "field",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "field": {
+                    "key": "field_26"
+                  },
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Total",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "",
+                  "link_type": "text",
+                  "rules": [],
+                  "type": "field",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "field": {
+                    "key": "field_27"
+                  },
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Order Date",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "",
+                  "link_type": "text",
+                  "rules": [],
+                  "type": "field",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Edit Order",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "edit",
+                  "link_type": "text",
+                  "rules": [],
+                  "scene": "edit-order",
+                  "sortable": false,
+                  "type": "link",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                },
+                {
+                  "align": "left",
+                  "conn_link": "",
+                  "conn_separator": "",
+                  "group_sort": "asc",
+                  "grouping": false,
+                  "header": "Order Details",
+                  "icon": {
+                    "align": "left",
+                    "icon": ""
+                  },
+                  "ignore_edit": false,
+                  "ignore_summary": false,
+                  "img_gallery": "",
+                  "link_field": "",
+                  "link_text": "view",
+                  "link_type": "text",
+                  "rules": [],
+                  "scene": "order-details",
+                  "sortable": false,
+                  "type": "link",
+                  "width": {
+                    "amount": "50",
+                    "type": "default",
+                    "units": "px"
+                  }
+                }
+              ],
+              "links": [],
+              "inputs": [],
+              "_id": "61e86a841137bc002545ff1d",
+              "groups": [],
+              "format": "",
+              "label": "",
+              "name": "Orders",
+              "type": "table",
+              "title": "Orders",
+              "description": "",
+              "source": {
+                "criteria": {
+                  "match": "all",
+                  "rules": [],
+                  "groups": []
+                },
+                "limit": "",
+                "sort": [
+                  {
+                    "field": "field_22",
+                    "order": "asc"
+                  }
+                ],
+                "type": ""
+              },
+              "key": "view_8"
+            }
+          ],
+          "parent": "home"
+        },
+        {
+          "groups": [],
+          "_id": "61e86a841137bc002545ff1e",
+          "name": "Edit Order",
+          "slug": "edit-order",
+          "key": "scene_8",
+          "views": [
+            {
+              "columns": [],
+              "links": [],
+              "inputs": [],
+              "_id": "61e86a841137bc002545ff1f",
+              "groups": [
+                {
+                  "columns": [
+                    {
+                      "inputs": [
+                        {
+                          "field": {
+                            "key": "field_22"
+                          },
+                          "label": "Orders Name",
+                          "type": "text_field"
+                        },
+                        {
+                          "field": {
+                            "key": "field_24"
+                          },
+                          "label": "Status",
+                          "type": "combo_box"
+                        },
+                        {
+                          "field": {
+                            "key": "field_25"
+                          },
+                          "label": "Description",
+                          "type": "text_area"
+                        },
+                        {
+                          "field": {
+                            "key": "field_26"
+                          },
+                          "label": "Total",
+                          "type": "text_field"
+                        },
+                        {
+                          "field": {
+                            "key": "field_27"
+                          },
+                          "label": "Order Date",
+                          "type": "text_field"
+                        },
+                        {
+                          "field": {
+                            "key": "field_28"
+                          },
+                          "label": "Ship Date",
+                          "type": "text_field"
+                        },
+                        {
+                          "field": {
+                            "key": "field_29"
+                          },
+                          "label": "Shipping Address",
+                          "type": "text_area"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "format": "",
+              "label": "",
+              "name": "Edit Order",
+              "type": "form",
+              "title": "Edit Order",
+              "description": "",
+              "source": {
+                "criteria": null,
+                "limit": "",
+                "sort": null,
+                "type": ""
+              },
+              "key": "view_9"
+            }
+          ],
+          "parent": "orders",
+          "object": "object_5"
+        },
+        {
+          "groups": [],
+          "_id": "61e86a841137bc002545ff20",
+          "name": "Order Details",
+          "slug": "order-details",
+          "key": "scene_9",
+          "views": [
+            {
+              "columns": [
+                {
+                  "groups": [
+                    {
+                      "columns": [
+                        [
+                          {
+                            "key": "field_22",
+                            "name": "Orders Name"
+                          },
+                          {
+                            "key": "field_23",
+                            "name": "Order ID"
+                          },
+                          {
+                            "key": "field_24",
+                            "name": "Status"
+                          },
+                          {
+                            "key": "field_25",
+                            "name": "Description"
+                          },
+                          {
+                            "key": "field_26",
+                            "name": "Total"
+                          },
+                          {
+                            "key": "field_27",
+                            "name": "Order Date"
+                          },
+                          {
+                            "key": "field_28",
+                            "name": "Ship Date"
+                          }
+                        ]
+                      ]
+                    }
+                  ],
+                  "width": 100
+                }
+              ],
+              "links": [],
+              "inputs": [],
+              "_id": "61e86a841137bc002545ff21",
+              "groups": null,
+              "format": "",
+              "label": "",
+              "name": "Order",
+              "type": "details",
+              "title": "Order Details",
+              "description": "",
+              "source": {
+                "criteria": null,
+                "limit": "",
+                "sort": null,
+                "type": ""
+              },
+              "key": "view_10"
+            }
+          ],
+          "parent": "orders",
+          "object": "object_5"
+        }
+      ]
+    }
+  ],
+  "first_created": "2022-01-01T01:00:00Z",
+  "account_id": "5eb08b3c32ceea001d8d36c9",
+  "user_id": "5eb08b3c32ceea001d8d36c8"
+}
