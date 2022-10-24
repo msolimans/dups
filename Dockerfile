@@ -12,7 +12,7 @@ RUN go mod download
 
 COPY . /app
 # we can also use -mod=vendor instead if we don't want to download modules everytime we build 
-RUN go build -o dups -ldflags "-X 'github.com/msolimans/dups/pkg/build.Revision=$REVISION_NUM#$(date -u +%Y-%m-%d)' -X 'github.com/msolimans/dups/pkg/build.Time=$(date)'" cmd/main.go
+RUN go build -o dups -ldflags "-X 'github.com/msolimans/dups/pkg/build.Revision=$REVISION_NUM' -X 'github.com/msolimans/dups/pkg/build.Time=$(date)'" cmd/main.go
 # we can use even smaller image like `scratch` which saves cost in registeries and more secured than alpine however it won't give access to shell, busybox can be used in cases where we need shell
 FROM alpine
 COPY --from=buildstg /app/dups /dups

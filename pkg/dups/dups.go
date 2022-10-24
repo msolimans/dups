@@ -22,6 +22,7 @@ func Start(source, destination string, concurrent, pretty, out bool) {
 	viewCount := res.ViewCount
 	
 	//remove duplicates
+	
 	res.RemoveDuplicates(concurrent)
 
 	//write to a new file

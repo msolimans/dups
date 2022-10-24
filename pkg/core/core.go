@@ -11,10 +11,45 @@ func (v *Version) removeDuplicateObjects(fields map[string]*Field, currentFieldC
 	for _, o := range v.Objects { //[]->[]
 		//files 
 		x := 0
+		// for i := 0 ;i<len(o.Fields);i++ {
+
+		// }
+		//versions[] 1version
+		//	objects[] 123,field1 - 123,field1 
+		//	fields[]
+		//////
+		//versions[] 2version
+		//	objects[] 123,field1 - 123,field1 
+		//	fields[]
+		//x = 0 
+		//map(fields)  1 2 3 
+
+		//2 1 3 1 2 (key of fields) 
+		//    x
+		//2nd approach 
+		//0 1 2 3 4 5 6 
+		//1 2 3 2 4 5   (on) time compelexity 
+		//1 2 3 
+		
+		// res := []*Field{}
+		
 		for i, f := range o.Fields {
-			if  _, exists := fields[f.ID+f.Key]; !exists {
-				fields[f.ID+f.Key] = f
-			} else {
+			fIDExist := true 
+			fKeyExist := true 
+
+			if  _, exists := fields[f.ID]; !exists {
+				fields[f.ID] = f
+				fIDExist = false 
+				// res = append(res, f)
+			} 
+			
+			if _, exists := fields[f.Key]; !exists {
+				fields[f.Key] = f
+				fKeyExist = false 
+				// res = append(res, f)
+			} 
+			
+			if fIDExist || fKeyExist {
 				//remove it 
 				if async {
 					o.Lock()
@@ -38,6 +73,10 @@ func (v *Version) removeDuplicateObjects(fields map[string]*Field, currentFieldC
 
 	return currentFieldCount
 }
+// k = n(version) 
+// m = nobjects 
+// n = n(fields) 
+// k*m*n
 
 func (v *Version) removeDuplicateViews(views map[string]*View, currentViewCount int, async bool) int {
 	if v == nil {
@@ -108,6 +147,22 @@ func (v *Version) removeDuplicateViewsAsync(views map[string]*View, oldViewCount
 }
 
 func (obj *DBSchema) RemoveDuplicates(concurrent bool) {
+	
+	// 50 reques per scond 
+	// 5 MBs * 50 = 250 MBs
+	// 250 MBs * 60 = 15 GBs
+
+	// 
+	
+	
+	// Uploading (25 MB) => LBs => Direct Call () (Hot calls)
+	// 	--> S3 	=> SQS 
+	//	Worker Nodes <- (ASG) CPU/Network
+	//		 |
+	//		 V
+	//		LB => API => SNS 
+	
+	//go routines 
 	if obj == nil {
 		return
 	}
@@ -119,6 +174,7 @@ func (obj *DBSchema) RemoveDuplicates(concurrent bool) {
 	//The description was not clear whether we do have duplicates in versions level as well, in other words, if we might have multiple versions with the same id. in such case I would do the same concept
 	//I would use a map to store the ids and check if the id exists in the map, if it does, I would remove it from the array, otherwise I would add it to the map
 	//In case we have so many ids, I can do this 
+	
 	
 	for _, v := range obj.Versions  {
 		//I assumed duplications are per version and we need to clean versions separately.
